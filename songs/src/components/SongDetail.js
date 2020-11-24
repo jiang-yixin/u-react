@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const SongDetail = (props) => {
-  if (props.song !==  null) {
+  if (!props.song) {
     return (
       <div>
         <h3>{props.song.title}</h3>
@@ -13,8 +13,6 @@ const SongDetail = (props) => {
   else {
     return <div></div>
   }
-
-
 }
 
 const mapStateToProps = (state) => {
